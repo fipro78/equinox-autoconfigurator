@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Equinox Autoconfigurator
+Bundle-SymbolicName: org.eclipse.equinox.autoconfigurator
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Activator: org.eclipse.equinox.autoconfigurator.ConfigurationActivator
+Import-Package: org.eclipse.osgi.framework.log;version="[1.1.0,2.0.0)",
+ org.eclipse.osgi.service.datalocation;version="[1.3.0,2.0.0)",
+ org.eclipse.osgi.service.debug;version="[1.2.0,2.0.0)",
+ org.osgi.framework;version="[1.6.0,2.0.0)",
+ org.osgi.framework.startlevel;version="[1.0.0,2.0.0)",
+ org.osgi.framework.wiring;version="[1.0.0,2.0.0)",
+ org.osgi.util.tracker;version="[1.5.0,2.0.0)"
