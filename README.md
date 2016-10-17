@@ -8,6 +8,7 @@ Note that this autoconfigurator simply installs and starts bundles in the _plugi
 The intention of the autoconfigurator is to simplify the creation of a simple Equinox runtime. It needs to be located next to the _org.eclipse.osgi_ bundle. 
 The _plugins_ directory needs to be at the same level together with the _configuration_ directory.
 
+```
 somedir/
   configuration/
     config.ini
@@ -16,6 +17,7 @@ somedir/
     B2.jar
   org.eclipse.osgi_x.x.x.jar
   org.eclipse.equinox.autoconfigurator_x.x.x.jar
+```
 
 The _config.ini_ file only needs the following entries:
 
