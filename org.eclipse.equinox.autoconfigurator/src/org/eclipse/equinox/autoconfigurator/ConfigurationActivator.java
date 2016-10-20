@@ -162,10 +162,11 @@ public class ConfigurationActivator implements BundleActivator {
 			refreshPackages(toRefresh);
 			
 			for (Bundle bundle : context.getBundles()) {
-				if (bundle.getState() == Bundle.RESOLVED) {
+				// always ensure that a bundle is automatically started
+				if (bundle.getState() == Bundle.RESOLVED
+						|| bundle.getState() == Bundle.STARTING) {
 					try {
-						// use the START_ACTIVATION_POLICY option so this is not an eager activation.
-						bundle.start(Bundle.START_ACTIVATION_POLICY);
+						bundle.start();
 					} catch (BundleException e) {
 						if ((bundle.getState() & Bundle.RESOLVED) != 0)
 							// only log errors if the bundle is resolved
